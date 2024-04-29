@@ -47,7 +47,7 @@ class Skyland extends \yii\db\ActiveRecord
     {
         return [
             [['biswa', 'biswasi', 'share', 'size1', 'size2', 'size3', 'size4', 'plot_no', 'north', 'south', 'east', 'west', 'total_deal', 'clint_name', 'relation', 'address', 'amount_rec', 'amount_words', 'payment_through', 'payment_pending', 'registry_date'], 'required'],
-            [['total_deal'], 'integer'],
+            [['total_deal'], 'string'],
             [['biswa', 'biswasi', 'share', 'size1', 'size2', 'size3', 'size4', 'plot_no', 'north', 'south', 'east', 'west', 'clint_name', 'relation', 'address', 'amount_rec', 'amount_words', 'payment_through', 'payment_pending', 'registry_date'], 'string', 'max' => 512],
         ];
     }

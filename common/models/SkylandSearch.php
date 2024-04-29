@@ -17,7 +17,8 @@ class SkylandSearch extends Skyland
     public function rules()
     {
         return [
-            [['id', 'total_deal'], 'integer'],
+            [['id'], 'integer'],
+            [['total_deal'], 'string'],
             [['biswa', 'biswasi', 'share', 'size1', 'size2', 'size3', 'size4', 'plot_no', 'north', 'south', 'east', 'west', 'clint_name', 'relation', 'address', 'amount _rec.', 'amount_words', 'payment_through', 'payment_pending', 'registry_date'], 'safe'],
         ];
     }
