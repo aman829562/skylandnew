@@ -50,7 +50,7 @@ $this->params['breadcrumbs'][] = $this->title;
         $total=$aman*$aman1/9;
         echo $total;
         ?> Sq.Yards Plot No. <?php echo $model->plot_no ?> , Sky Land Kaulimajra, M.C. Lalru) Bounded North: -
-        Plot Number-<?php echo $model->north?>, South:-<?php echo $model->south; ?>, East:- <?php echo $model->north; ?>, West:- <?php echo $model->west; ?> (Director Local Government Punjab
+       -<?php echo $model->north?>, South:-<?php echo $model->south; ?>, East:- <?php echo $model->east; ?>, West:- <?php echo $model->west; ?> (Director Local Government Punjab
         Chandigarh Issue Letter No. CTP(LG)-2023/1234 Date 02-05-2023), Situated at Vill. Kaulimajra, Tehsil Dera bassi Distt.
         SAS Nagar, along with all rights, easements of path etc.
    </div>
