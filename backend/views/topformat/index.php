@@ -42,7 +42,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'south',
             'east',
             'west',
-            [
+            [   
                 'class' => ActionColumn::className(),
                 'urlCreator' => function ($action, Topformat $model, $key, $index, $column) {
                     return Url::toRoute([$action, 'id' => $model->id]);
@@ -50,6 +50,5 @@ $this->params['breadcrumbs'][] = $this->title;
             ],
         ],
     ]); ?>
-
 
 </div>

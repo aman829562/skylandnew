@@ -36,7 +36,7 @@ $this->params['breadcrumbs'][] = $this->title;
         Khata No. 69/188 Khasra Nos.
         1176(4-0),1177(4-0),1178(4-0),1212(4-0), Kitte 04 Total Land 16 Bigha being <?php
         $share=$model->share/2.5;
-        echo $share;?>/6400 Share I.e. <?php $model ?> Biswa
+        echo $share;?>/6400 Share I.e. <?php $model->biswa ?> Biswa
         <?php if(!$model->biswasi =='0'){
 
         }else{
@@ -56,9 +56,9 @@ $this->params['breadcrumbs'][] = $this->title;
    </div>
 
     <p>
-        2) 	That today on 16/03/2024 I have confirmed the agreement to sell the above Plot at Amount <?php echo $model->total_deal; ?>/- to
+        2) 	That today on <u>16/03/2024 </u> I have confirmed the agreement to sell the above Plot at Amount <?php echo $model->total_deal; ?>/- to
         <?php echo $model->clint_name ; echo $model->relation;  ?> R/o <?php  echo $model->address?>. And has received as earnest
-        money Rs.<?php echo $model->amount_rec; ?>/- (<?php  echo $model->amount_words?> ).
+        money Rs.<?php echo $model->amount_rec; ?>/- (<?php  echo $model->amount_words?> )( From Which Rs. <?php echo $model->payment_through ?>).
         As earnest money/Biana from purchaser
         before the marginal. Witnesses and it is agreed between both the parties that I shall get the sale-deed executed
         & registered in favor of purchaser or any other person intended by purchaser up to <?php echo $model->registry_date; ?> after receiving the
@@ -75,10 +75,6 @@ $this->params['breadcrumbs'][] = $this->title;
         senses as that it may be used at proper time. The writing has been heard by sellers and understood and accepted
         true and correct.
 
-        Witness                                                                                Seller
-
-
-        Witness                                                                                Purchaser
 
     </p>
 
