@@ -32,9 +32,9 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'south')->textInput(['value' => 'Plot No. ']) ?>
 
-    <?= $form->field($model, 'east')->textInput(['value'=>'Plot No. ']) ?>
+<!--    --><?php //= $form->field($model, 'east')->textInput(['value'=>'Plot No. ']) ?>
 
-    <?= $form->field($model, 'west')->textInput(['value'=>'Plot No. ']) ?>
+<!--    --><?php //= $form->field($model, 'west')->textInput(['value'=>'Plot No. ']) ?>
 
     <div class="form-group">
         <?= Html::submitButton(Yii::t('app', 'Save'), ['class' => 'btn btn-success']) ?>

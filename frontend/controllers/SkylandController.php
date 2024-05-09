@@ -73,6 +73,7 @@ class SkylandController extends Controller
             if ($model->load($this->request->post())) {
                 $pending=$model->total_deal-$model->amount_rec;
                 $model->payment_pending=$pending;
+
                 $model->save(false);
                 return $this->redirect(['view', 'id' => $model->id]);
             }

@@ -24,7 +24,8 @@ $this->params['breadcrumbs'][] = $this->title;
                 'method' => 'post',
             ],
         ]) ?>
-        <a javascript:this.print>print</a>
+        <button onclick="window.print()">Print this page</button>
+
     </p>
    <div class="text-justify" style="width: 720px">
         1) 	Whereas the Company is the owner in possession of Land measuring <?php echo $model->biswa; ?> Biswa
@@ -36,14 +37,14 @@ $this->params['breadcrumbs'][] = $this->title;
         Khata No. 69/188 Khasra Nos.
         1176(4-0),1177(4-0),1178(4-0),1212(4-0), Kitte 04 Total Land 16 Bigha being <?php
         $share=$model->share/2.5;
-        echo $share;?>/6400 Share I.e. <?php $model->biswa ?> Biswa
-        <?php if(!$model->biswasi =='0'){
+        echo $share;?>/6400 Share I.e. <?php echo  $model->biswa ?> Biswa
+        <?php if($model->biswasi =='0'){
 
         }else{
-            echo 'hello';
+
             echo $model->biswasi.' Biswasi';
         } ?>
-        (Each Plot Size <?php echo $model->size1."'-"; echo $model->size2.'" X '; echo $model->size3."'-"; echo $model->size4.'"' ?> =
+        (Plot Size <?php echo $model->size1."'-"; echo $model->size2.'" X '; echo $model->size3."'-"; echo $model->size4.'"' ?> =
         <?php
         $aman=$model->size1+$model->size2;
         $aman1=$model->size3+$model->size4;
@@ -74,8 +75,6 @@ $this->params['breadcrumbs'][] = $this->title;
         binding on both the parties and their privies/ heirs. Hence the agreement to sell is got written in my complete
         senses as that it may be used at proper time. The writing has been heard by sellers and understood and accepted
         true and correct.
-
-
     </p>
 
 </div>
