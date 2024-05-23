@@ -48,7 +48,7 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'amount_words')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'payment_through')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'payment_through')->textarea(['maxlength' => true]) ?>
 
     <?= $form->field($model, 'registry_date')->textInput(['maxlength' => true]) ?>
 

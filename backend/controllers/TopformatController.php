@@ -74,8 +74,8 @@ class TopformatController extends Controller
                 $model->ttsize=$aman;
                 $share=$model->share/2.5;
                 $model->share=$share;
-                $model->east=$model->plot_no+1;
-                $model->west=$model->plot_no-1;
+//                $model->east="$model->plot_no+1";
+//                $model->west="$model->plot_no-1";
                 $model->save(false);
                 $model->refresh();
                 return $this->redirect(['view', 'id' => $model->id]);
