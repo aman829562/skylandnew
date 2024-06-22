@@ -24,44 +24,43 @@ $this->params['breadcrumbs'][] = $this->title;
                 'method' => 'post',
             ],
         ]) ?>
-        <button onclick="window.print()">Print this page</button>
+<!--        <button onclick="window.print()">Print this page</button>-->
 
     </p>
    <div class="text-justify" style="width: 720px">
-        1) 	Whereas the Company is the owner in possession of Land measuring <?php echo $model->biswa; ?> Biswa
+        1) 	Whereas the Company is the owner in possession of Land measuring <?=$model->biswa; ?> Biswa
         <?php if($model->biswasi=='0'){
 
         }else{
-            echo $model->biswasi.' Biswasi';
+           echo  $model->biswasi.' Biswasi';
         } ?>
         Khata No. 69/188 Khasra Nos.
-        1176(4-0),1177(4-0),1178(4-0),1212(4-0), Kitte 04 Total Land 16 Bigha being <?php
-        $share=$model->share/2.5;
-        echo $share;?>/6400 Share I.e. <?php echo  $model->biswa ?> Biswa
+        1176(4-0),1177(4-0),1178(4-0),1212(4-0), Kitte 04 Total Land 16 Bigha being <?=$share=$model->share/2.5;
+         $share;?>/6400 Share I.e. <?=$model->biswa ?> Biswa
         <?php if($model->biswasi =='0'){
 
         }else{
 
-            echo $model->biswasi.' Biswasi';
+             echo $model->biswasi.' Biswasi';
         } ?>
-        (Plot Size <?php echo $model->size1."'-"; echo $model->size2.'" X '; echo $model->size3."'-"; echo $model->size4.'"' ?> =
+        (Plot Size <?= $model->size1."'-"; echo $model->size2.'" X ';  echo $model->size3."'-"; echo $model->size4.'"' ?> =
         <?php
         $aman=$model->size1+$model->size2;
         $aman1=$model->size3+$model->size4;
         $total=$aman*$aman1/9;
         echo $total;
-        ?> Sq.Yards Plot No. <?php echo $model->plot_no ?> , Sky Land Kaulimajra, M.C. Lalru) Bounded North: -
-       <?php echo $model->north?>, South:-<?php echo $model->south; ?>, East:- <?php echo $model->east; ?>, West:- <?php echo $model->west; ?> (Director Local Government Punjab
+        ?> Sq.Yards Plot No. <?=$model->plot_no ?> , Sky Land Kaulimajra, M.C. Lalru) Bounded North: -
+       <?=$model->north?>, South:-<?=$model->south; ?>, East:- <?=$model->east; ?>, West:- <?=$model->west; ?> (Director Local Government Punjab
         Chandigarh Issue Letter No. CTP(LG)-2023/1234 Date 02-05-2023), Situated at Vill. Kaulimajra, Tehsil Dera bassi Distt.
         SAS Nagar, along with all rights, easements of path etc.
    </div>
-    <p>
-        2) 	That today on <u>16/03/2024 </u> I have confirmed the agreement to sell the above Plot at Amount Rs.<?php echo $model->total_deal; ?>/- to
-        <?php echo $model->clint_name ; echo $model->relation;  ?> R/o <?php  echo $model->address?>. And has received as earnest
-        money Rs.<?php echo $model->amount_rec; ?>/- (<?php  echo $model->amount_words?>) (From Which Rs. <?php echo $model->payment_through ?>).
+    <div>
+        2) 	That today on <u>16/03/2024 </u> I have confirmed the agreement to sell the above Plot at Amount Rs.<?=$model->total_deal; ?>/- to
+        <?=$model->clint_name ;  $model->relation;  ?> R/o <?=$model->address?>. And has received as earnest
+        money Rs.<?=$model->amount_rec; ?>/- (<?=$model->amount_words?>) (From Which Rs. <?=$model->payment_through ?>).
         As earnest money/Biana from purchaser  before the witnesses and it is agreed between both the parties that I shall get the sale-deed executed
-        & registered in favor of purchaser or any other person intended by purchaser up to <?php echo $model->registry_date; ?> after receiving the
-        remaining amount <?php echo $model->payment_pending; ?>/-Rs. On the refusal of seller, the purchaser can get the sale - deed executed and
+        & registered in favor of purchaser or any other person intended by purchaser up to <?=$model->registry_date; ?> after receiving the
+        remaining amount <?=$model->payment_pending;?>/-Rs. On the refusal of seller, the purchaser can get the sale - deed executed and
         registered on depositing the remaining amount in the court and will also be entitled to get his expensive so
         incurred from seller. But if purchaser resiles from the agreement or breaks the agreement, his earnest money
         will be forfeited to the seller & agreement of sale will be considered cancelled. The expenses of the sale deed
@@ -73,7 +72,7 @@ $this->params['breadcrumbs'][] = $this->title;
         binding on both the parties and their privies/ heirs. Hence the agreement to sell is got written in my complete
         senses as that it may be used at proper time. The writing has been heard by sellers and understood and accepted
         true and correct.
-    </p>
+    </div>
 
 </div>
 <p class="text-justify" style="width:750px">
