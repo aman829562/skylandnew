@@ -6,12 +6,12 @@ use yii\widgets\DetailView;
 /** @var yii\web\View $this */
 /** @var common\models\Skyland $model */
 
-$this->title = $model->id;
-$this->params['breadcrumbs'][] = ['label' => Yii::t('app', 'Skylands'), 'url' => ['index']];
-$this->params['breadcrumbs'][] = $this->title;
-\yii\web\YiiAsset::register($this);
-?>
-<div class="skyland-view">
+// $this->title = $model->id;
+// $this->params['breadcrumbs'][] = ['label' => Yii::t('app', 'Skylands'), 'url' => ['index']];
+// $this->params['breadcrumbs'][] = $this->title;
+// yii\web\YiiAsset::register($this);
+// ?>
+<!-- <div class="skyland-view">
 
     <h1><?= Html::encode($this->title) ?></h1>
 
@@ -24,11 +24,26 @@ $this->params['breadcrumbs'][] = $this->title;
                 'method' => 'post',
             ],
         ]) ?>
-<!--        <button onclick="window.print()">Print this page</button>-->
+       
 
-    </p>
-   <div class="text-justify" style="width: 720px">
-        1) 	Whereas the Company is the owner in possession of Land measuring <?=$model->biswa; ?> Biswa
+    </p> -->
+    <button onclick="window.print()">Print</button>
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+        <h3 align="center">AGREEMENT TO SELL</h3><b>
+       <?php echo "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp"; ?>   M/s S K Builders VPO Lalru Tehsil Derabassi Through Partner Ranjeet Singh S/o Sh. Diwan Chand Village Lalru, Tehsil Dera Bassi, Distt S.A.S. Nagar Khewatdar of Vill Kaulimajra, Tehsil Dera Bassi, Distt SAS Nagar (PB).
+  
+    </div>
+  <div align="justify"> <font face="" size ="4">
+         <ol> <li>
+         	Whereas the Company is the owner in possession of Land measuring <?=$model->biswa; ?> Biswa
         <?php if($model->biswasi=='0'){
 
         }else{
@@ -53,10 +68,13 @@ $this->params['breadcrumbs'][] = $this->title;
        <?=$model->north?>, South:-<?=$model->south; ?>, East:- <?=$model->east; ?>, West:- <?=$model->west; ?> (Director Local Government Punjab
         Chandigarh Issue Letter No. CTP(LG)-2023/1234 Date 02-05-2023), Situated at Vill. Kaulimajra, Tehsil Dera bassi Distt.
         SAS Nagar, along with all rights, easements of path etc.
-   </div>
-    <div>
-        2) 	That today on <u>16/03/2024 </u> I have confirmed the agreement to sell the above Plot at Amount Rs.<?=$model->total_deal; ?>/- to
-        <?=$model->clint_name ;  $model->relation;  ?> R/o <?=$model->address?>. And has received as earnest
+        <!-- <hr size="5cm" color="#000000"/> -->
+       
+    </li>
+   
+    <div align="justify">
+        <li>That today on <u>16/03/2024</u> I have confirmed the agreement to sell the above Plot at Amount Rs.<?=$model->total_deal; ?>/- to
+        <?=$model->clint_name; echo $model->relation;  ?> R/o <?=$model->address?>. And has received as earnest
         money Rs.<?=$model->amount_rec; ?>/- (<?=$model->amount_words?>) (From Which Rs. <?=$model->payment_through ?>).
         As earnest money/Biana from purchaser  before the witnesses and it is agreed between both the parties that I shall get the sale-deed executed
         & registered in favor of purchaser or any other person intended by purchaser up to <?=$model->registry_date; ?> after receiving the
@@ -72,7 +90,11 @@ $this->params['breadcrumbs'][] = $this->title;
         binding on both the parties and their privies/ heirs. Hence the agreement to sell is got written in my complete
         senses as that it may be used at proper time. The writing has been heard by sellers and understood and accepted
         true and correct.
+        </b> </li></ol>
+        </font>
     </div>
-
 </div>
-<p class="text-justify" style="width:750px">
+
+  </body>
+  </html>
+    <!-- <p class="text-justify" style="width:750px"> -->
