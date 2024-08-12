@@ -38,12 +38,6 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'total_deal')->textInput() ?>
 
-    <?= $form->field($model, 'clint_name')->textInput(['maxlength' => true]) ?>
-
-    <?= $form->field($model, 'relation')->textInput(['maxlength' => true]) ?>
-
-    <?= $form->field($model, 'address')->textInput(['maxlength' => true]) ?>
-
     <?= $form->field($model, 'amount_rec')->textInput(['maxlength' => true]) ?>
 
     <?= $form->field($model, 'amount_words')->textInput(['maxlength' => true]) ?>
@@ -51,6 +45,13 @@ use yii\widgets\ActiveForm;
     <?= $form->field($model, 'payment_through')->textarea(['maxlength' => true]) ?>
 
     <?= $form->field($model, 'registry_date')->textInput(['maxlength' => true]) ?>
+
+    <?= $form->field($model, 'clint_name')->textInput(['maxlength' => true]) ?>
+
+    <?= $form->field($model, 'relation')->textInput(['maxlength' => true]) ?>
+
+    <?= $form->field($model, 'address')->textInput(['maxlength' => true]) ?>
+
 
     <div class="form-group">
         <?= Html::submitButton(Yii::t('app', 'Save'), ['class' => 'btn btn-success']) ?>

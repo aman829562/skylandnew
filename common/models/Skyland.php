@@ -29,6 +29,7 @@ use Yii;
  * @property string $payment_through
  * @property string $payment_pending
  * @property string $registry_date
+ * @property string $date
  */
 class Skyland extends \yii\db\ActiveRecord
 {
@@ -47,8 +48,8 @@ class Skyland extends \yii\db\ActiveRecord
     {
         return [
             [['biswa', 'biswasi', 'share', 'size1', 'size2', 'size3', 'size4', 'plot_no', 'north', 'south', 'east', 'west', 'total_deal', 'clint_name', 'relation', 'address', 'amount_rec', 'amount_words', 'payment_through', 'payment_pending', 'registry_date'], 'required'],
-            [['total_deal'], 'string'],
-            [['biswa', 'biswasi', 'share', 'size1', 'size2', 'size3', 'size4', 'plot_no', 'north', 'south', 'east', 'west', 'clint_name', 'relation', 'address', 'amount_rec', 'amount_words', 'payment_through', 'payment_pending', 'registry_date'], 'string', 'max' => 512],
+            [['total_deal','date'], 'string'],
+            [['biswa', 'biswasi', 'share', 'size1', 'size2', 'size3', 'size4', 'plot_no', 'north', 'south', 'east', 'west', 'clint_name', 'relation', 'address', 'amount_rec', 'amount_words', 'payment_through', 'payment_pending', 'registry_date','date'], 'string', 'max' => 512],
         ];
     }
 
@@ -80,6 +81,7 @@ class Skyland extends \yii\db\ActiveRecord
             'payment_through' => 'Payment Through',
             'payment_pending' => 'Payment Pending',
             'registry_date' => 'Registry Date',
+            'date' => 'Date',
         ];
     }
 }

@@ -19,7 +19,7 @@ class SkylandSearch extends Skyland
         return [
             [['id'], 'integer'],
             [['total_deal'], 'string'],
-            [['biswa', 'biswasi', 'share', 'size1', 'size2', 'size3', 'size4', 'plot_no', 'north', 'south', 'east', 'west', 'clint_name', 'relation', 'address', 'amount _rec.', 'amount_words', 'payment_through', 'payment_pending', 'registry_date'], 'safe'],
+            [['biswa', 'biswasi', 'share', 'size1', 'size2', 'size3', 'size4', 'plot_no', 'north', 'south', 'east', 'west', 'clint_name', 'relation', 'address', 'amount _rec.', 'amount_words', 'payment_through', 'payment_pending', 'registry_date','date'], 'safe'],
         ];
     }
 
@@ -82,7 +82,8 @@ class SkylandSearch extends Skyland
             ->andFilterWhere(['like', 'amount_words', $this->amount_words])
             ->andFilterWhere(['like', 'payment_through', $this->payment_through])
             ->andFilterWhere(['like', 'payment_pending', $this->payment_pending])
-            ->andFilterWhere(['like', 'registry_date', $this->registry_date]);
+            ->andFilterWhere(['like', 'registry_date', $this->registry_date])
+            ->andFilterWhere(['like', 'registry_date', $this->date]);
 
         return $dataProvider;
     }

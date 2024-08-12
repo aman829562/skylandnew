@@ -14,7 +14,6 @@ use yii\widgets\DetailView;
 <!-- <div class="skyland-view">
 
     <h1><?= Html::encode($this->title) ?></h1>
-
     <p>
         <?= Html::a(Yii::t('app', 'Update'), ['update', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
         <?= Html::a(Yii::t('app', 'Delete'), ['delete', 'id' => $model->id], [
@@ -27,7 +26,7 @@ use yii\widgets\DetailView;
        
 
     </p> -->
-    <button onclick="window.print()">Print</button>
+<!--    <button onclick="window.print()">Print</button>-->
   <!DOCTYPE html>
   <html lang="en">
   <head>
@@ -35,6 +34,7 @@ use yii\widgets\DetailView;
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
   </head>
+  <a href="javascript:;" onclick="window.print()" class="btn btn-sm btn-white m-b-10 p-l-5"><i class="fa fa-print t-plus-1 fa-fw fa-lg"></i> Print</a>
   <body>
     <div>
         <h3 align="center">AGREEMENT TO SELL</h3><b>
@@ -58,14 +58,14 @@ use yii\widgets\DetailView;
 
              echo $model->biswasi.' Biswasi';
         } ?>
-        (Plot Size <?= $model->size1."'-"; echo $model->size2.'" X ';  echo $model->size3."'-"; echo $model->size4.'"' ?> =
+       <u> (Plot Size <?= $model->size1."'-"; echo $model->size2.'" X ';  echo $model->size3."'-"; echo $model->size4.'"' ?> =
         <?php
         $aman=$model->size1+$model->size2;
         $aman1=$model->size3+$model->size4;
         $total=$aman*$aman1/9;
         echo $total;
         ?> Sq.Yards Plot No. <?=$model->plot_no ?> , Sky Land Kaulimajra, M.C. Lalru) Bounded North: -
-       <?=$model->north?>, South:-<?=$model->south; ?>, East:- <?=$model->east; ?>, West:- <?=$model->west; ?> (Director Local Government Punjab
+       <?=$model->north?>, South:-<?=$model->south; ?>, East:- <?=$model->east; ?>, West:- <?=$model->west; ?></u> (Director Local Government Punjab
         Chandigarh Issue Letter No. CTP(LG)-2023/1234 Date 02-05-2023), Situated at Vill. Kaulimajra, Tehsil Dera bassi Distt.
         SAS Nagar, along with all rights, easements of path etc.
         <!-- <hr size="5cm" color="#000000"/> -->
@@ -73,12 +73,12 @@ use yii\widgets\DetailView;
     </li>
    
     <div align="justify">
-        <li>That today on <u>16/03/2024</u> I have confirmed the agreement to sell the above Plot at Amount Rs.<?=$model->total_deal; ?>/- to
-        <?=$model->clint_name; echo $model->relation;  ?> R/o <?=$model->address?>. And has received as earnest
-        money Rs.<?=$model->amount_rec; ?>/- (<?=$model->amount_words?>) (From Which Rs. <?=$model->payment_through ?>).
-        As earnest money/Biana from purchaser  before the witnesses and it is agreed between both the parties that I shall get the sale-deed executed
-        & registered in favor of purchaser or any other person intended by purchaser up to <?=$model->registry_date; ?> after receiving the
-        remaining amount <?=$model->payment_pending;?>/-Rs. On the refusal of seller, the purchaser can get the sale - deed executed and
+        <li> That today on <u><?=$model->date?></u> I have confirmed the agreement to sell the above Plot at Amount <u>Rs.<?=$model->total_deal; ?></u>/- to
+       <u> <?=$model->clint_name; echo $model->relation;  ?> R/o <?=$model->address?>.</u> And has received
+        <u> Rs.<?=$model->amount_rec; ?>/- (<?=$model->amount_words?>) (From Which Rs. <?=$model->payment_through ?>)</u>,
+        as earnest money/Biana from purchaser  before the witnesses and it is agreed between both the parties that I shall get the sale-deed executed
+            & registered in favor of purchaser or any other person intended by purchaser up to <u><?=$model->registry_date; ?></u> after receiving the
+        remaining amount <u><?=$model->payment_pending;?></u>/-Rs. On the refusal of seller, the purchaser can get the sale - deed executed and
         registered on depositing the remaining amount in the court and will also be entitled to get his expensive so
         incurred from seller. But if purchaser resiles from the agreement or breaks the agreement, his earnest money
         will be forfeited to the seller & agreement of sale will be considered cancelled. The expenses of the sale deed

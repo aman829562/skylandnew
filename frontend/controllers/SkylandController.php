@@ -7,6 +7,7 @@ use common\models\SkylandSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use yii;
 
 /**
  * SkylandController implements the CRUD actions for Skyland model.
@@ -54,8 +55,17 @@ class SkylandController extends Controller
      * @throws NotFoundHttpException if the model cannot be found
      */
     public function actionView($id)
+
     {
+
         return $this->render('view', [
+            'model' => $this->findModel($id),
+        ]);
+    }
+    public function actionView1($id)
+
+    {
+        return $this->render('view1', [
             'model' => $this->findModel($id),
         ]);
     }
@@ -73,7 +83,7 @@ class SkylandController extends Controller
             if ($model->load($this->request->post())) {
                 $pending=$model->total_deal-$model->amount_rec;
                 $model->payment_pending=$pending;
-
+                $model->date=date('d-m-Y ');
                 $model->save(false);
                 return $this->redirect(['view', 'id' => $model->id]);
             }
@@ -97,10 +107,17 @@ class SkylandController extends Controller
     {
         $model = $this->findModel($id);
 
-        if ($this->request->isPost && $model->load($this->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
+        if ($this->request->isPost) {
+            if ($model->load($this->request->post())){
+                $pending=$model->total_deal-$model->amount_rec;
+                $model->payment_pending=$pending;
+                $model->date=date('d-m-Y ');
+                $model->save(false);
+                return $this->redirect(['view','id' => $model->id]);
+            }
+        } else {
+            $model->loadDefaultValues();
         }
-
         return $this->render('update', [
             'model' => $model,
         ]);
@@ -132,7 +149,6 @@ class SkylandController extends Controller
         if (($model = Skyland::findOne(['id' => $id])) !== null) {
             return $model;
         }
-
         throw new NotFoundHttpException(Yii::t('app', 'The requested page does not exist.'));
     }
 }
